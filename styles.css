@@ -1,0 +1,62 @@
+/* Brentwood — fun but calm. Layout: photo hero, white info panel overlapping it, two colored feature tiles. */
+:root {
+  --plum: #33265e;
+  --plum-dk: #241a45;
+  --teal: #0f7f82;
+  --teal-dk: #0b5f61;
+  --bg: #f5f4f9;
+  --text: #1f1b2e;
+  --muted: #4e4865;
+  --font: "Rubik", "Segoe UI", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); font-size: 1.15rem; line-height: 1.5; }
+.preview { background: #fff4cc; color: #5c4500; text-align: center; font-size: .85rem; font-weight: 600; padding: 6px; }
+
+.hero {
+  text-align: center; color: #fff; padding: 90px 20px 130px;
+  background: linear-gradient(rgba(36,26,69,.62), rgba(36,26,69,.78)), url("images/hero.jpg") center / cover no-repeat, var(--plum);
+}
+h1 { margin: 0; font-weight: 800; font-size: clamp(2.8rem, 11vw, 5rem); letter-spacing: -.01em; text-shadow: 0 2px 14px rgba(0,0,0,.4); }
+.hero p { margin: 8px 0 0; font-size: 1.25rem; color: #ece8f7; }
+
+.panel { position: relative; max-width: 980px; margin: -80px auto 0; background: #fff; border-radius: 16px; box-shadow: 0 16px 40px rgba(36,26,69,.18); display: grid; grid-template-columns: 1fr 1fr auto; align-items: center; }
+.panel-col { padding: 26px 28px; }
+.panel-col + .panel-col { border-left: 1px solid #e6e3ef; }
+.panel h2 { margin: 0 0 4px; font-size: 1.2rem; color: var(--teal-dk); text-transform: uppercase; letter-spacing: .06em; }
+.panel p { margin: 0; color: var(--muted); }
+.panel .addr { color: var(--text); font-weight: 600; }
+.link { display: inline-block; margin-top: 8px; color: var(--teal-dk); font-weight: 600; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; text-align: center; min-height: 54px; padding: 12px 24px; border-radius: 12px; font-weight: 800; font-size: 1.15rem; text-decoration: none; }
+.btn-main { background: var(--teal); color: #fff; font-size: 1.2rem; line-height: 1.25; }
+.btn-main:hover { background: var(--teal-dk); }
+.btn-light { background: #fff; color: var(--plum); margin-top: 16px; }
+.btn-light:hover { background: #ece8f7; }
+
+.tiles { max-width: 980px; margin: 34px auto 0; padding: 0 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.tile { border-radius: 16px; padding: 32px; color: #fff; }
+.tile h2 { margin: 0 0 6px; font-size: 1.8rem; font-weight: 800; }
+.tile p { margin: 0; color: rgba(255,255,255,.9); }
+.tile-bowl { background: var(--plum); }
+.tile-food { background: var(--teal-dk); }
+
+.updates { max-width: 980px; margin: 0 auto; padding: 52px 20px; }
+.updates > h2 { margin: 0 0 8px; font-size: 1.9rem; color: var(--plum); }
+.post { background: #fff; border-radius: 14px; padding: 22px 24px; margin-top: 14px; }
+.post .date { margin: 0; font-weight: 800; color: var(--teal-dk); font-size: .95rem; text-transform: uppercase; letter-spacing: .08em; }
+.post h3 { margin: 4px 0 6px; font-size: 1.3rem; }
+.post p { margin: 0; color: var(--muted); }
+
+.map { display: block; width: 100%; height: 360px; border: 0; }
+footer { text-align: center; padding: 22px; background: var(--plum-dk); color: #d6d0ea; font-size: 1rem; }
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+
+@media (max-width: 760px) {
+  .hero { padding: 64px 20px 110px; }
+  .panel { margin: -70px 16px 0; grid-template-columns: 1fr; }
+  .panel-col + .panel-col { border-left: 0; border-top: 1px solid #e6e3ef; }
+  .call-col { order: -1; border-bottom: 1px solid #e6e3ef; }
+  .btn { width: 100%; }
+  .tiles { grid-template-columns: 1fr; }
+}
