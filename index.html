@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Brentwood Dining &amp; Event Center | Caro, MI | (989) 673-2330</title>
-  <meta name="description" content="Brentwood Dining &amp; Event Center, 178 Park Dr, Caro, MI. Scratch-made American food, weekday lunch buffets and daily specials. Call (989) 673-2330.">
+  <meta name="description" content="Brentwood Dining &amp; Event Center, 178 Park Dr, Caro, MI. Scratch-made American food, weekday lunch buffets, daily specials, 2 full-service bars, private event space and a 16-lane bowling center. Call (989) 673-2330.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#141414">
-  <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+  <link rel="icon" href="favicon.svg?v=3" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Restaurant","name":"Brentwood Dining & Event Center","servesCuisine":"American","telephone":"+1-989-673-2330",
+  {"@context":"https://schema.org","@type":"Restaurant","name":"Brentwood Dining & Event Center","servesCuisine":["American","Pizza"],"telephone":"+1-989-673-2330",
    "address":{"@type":"PostalAddress","streetAddress":"178 Park Dr","addressLocality":"Caro","addressRegion":"MI","postalCode":"48723","addressCountry":"US"},
    "sameAs":["https://www.facebook.com/caro.brentwood"]}
   </script>
@@ -22,13 +22,19 @@
 
   <!-- PREVIEW BANNER: delete once the owner approves (and the .preview block in styles.css + the robots meta tag). -->
   <div class="preview" role="note">Preview - not yet approved by the business</div>
-  <!-- VERIFY WITH OWNER: full hours (Google shows "closes 9 PM"), whether bowling lanes are open (michigan.org lists 16 lanes), event/banquet details, menu, photos.
-       Sources checked 2026-11-24: Google Maps (no website listed), Facebook page (no website link), michigan.org, restaurantji. -->
+  <!-- SOURCES (checked 2026-11-24): Facebook About ("scratch made American cuisine with weekday lunch buffets, daily specials,
+       2 full service bars, private dining rooms, and a 16 lane bowling alley. Proudly Caro's gathering place for 44 years."),
+       their logo (casual dining & bar, hand tossed pizza, private event space for groups of any size, catering,
+       family hospitality dine-in or take-out, live comedy/music/theatre, bowling center), a recent Facebook post (trivia night winners),
+       Google Maps (no website listed, 4.3 stars).
+       LOGO: their Facebook profile picture, cropped. Ask permission on the call; remove if they say no.
+       STILL NEEDED FROM OWNER: full hours, menu + prices, event calendar, photos (food, lanes, bar, event rooms — no people). -->
 
-  <!-- HERO PHOTO: photo of the dining room or building at images/hero.jpg -->
+  <!-- HERO PHOTO: a real photo of the building, lanes or dining room goes in images/hero.jpg -->
   <header class="hero">
-    <h1>Brentwood</h1>
-    <p>Dining &amp; Event Center in Caro, Michigan</p>
+    <h1 class="sr-only">Brentwood Dining &amp; Event Center</h1>
+    <img class="logo" src="images/logo.jpg?v=3" alt="Brentwood Dining &amp; Event Center logo" width="610" height="440">
+    <p class="tagline">Caro's gathering place for <span>44 years</span></p>
   </header>
 
   <section class="panel" aria-label="Contact and hours">
@@ -46,28 +52,68 @@
     </div>
   </section>
 
-  <main class="tiles">
-    <section class="tile tile-bowl">
-      <h2>Dining</h2>
-      <p>Scratch-made American food, weekday lunch buffets and daily specials.</p>
-      <a class="btn btn-light" href="https://www.facebook.com/caro.brentwood" target="_blank" rel="noopener">See our Facebook page</a>
+  <main>
+    <section class="offer" aria-labelledby="offer-h">
+      <h2 id="offer-h">What We Offer</h2>
+      <p>Scratch-made American food and a lot more, all under one roof.</p>
+      <div class="grid">
+        <div class="item">
+          <h3>Casual Dining</h3>
+          <p>Scratch-made American food. Dine in or take out.</p>
+        </div>
+        <div class="item">
+          <h3>Weekday Lunch Buffet</h3>
+          <p>Lunch buffets on weekdays, plus daily specials.</p>
+        </div>
+        <div class="item">
+          <h3>Hand-Tossed Pizza</h3>
+          <p>Hand-tossed pizza, dine in or take out.</p>
+        </div>
+        <div class="item">
+          <h3>Two Full-Service Bars</h3>
+          <p>Two full-service bars under one roof.</p>
+        </div>
+        <div class="item">
+          <h3>16-Lane Bowling Center</h3>
+          <p>Sixteen lanes of bowling right inside Brentwood.</p>
+        </div>
+        <div class="item">
+          <h3>Live Entertainment</h3>
+          <p>Live comedy, music, theatre and trivia nights.</p>
+        </div>
+        <div class="item">
+          <h3>Private Event Space</h3>
+          <p>Private dining rooms for groups of any size.</p>
+        </div>
+        <div class="item">
+          <h3>Catering</h3>
+          <p>Brentwood food for your event. Call us for details.</p>
+        </div>
+      </div>
     </section>
-    <section class="tile tile-food">
-      <h2>Events</h2>
-      <p>Planning a party, banquet or get-together? Call us to talk about booking.</p>
+
+    <section class="cta" aria-label="Book an event">
+      <div class="cta-box">
+        <div>
+          <h2>Planning an event?</h2>
+          <p>Private event space for groups of any size. Call us to book.</p>
+        </div>
+        <a class="btn" href="tel:+19896732330">Call to book</a>
+      </div>
+    </section>
+
+    <section class="updates" aria-labelledby="updates-h">
+      <h2 id="updates-h">News &amp; Specials</h2>
+      <!-- UPDATES: newest first. Copy one <article> per post (date, title, 1-3 sentences). -->
+      <article class="post">
+        <p class="date">Trivia Night</p>
+        <h3>Congrats to our latest trivia winners!</h3>
+        <p>Watch our Facebook page for the next trivia night.</p>
+      </article>
+      <!-- END UPDATES -->
+      <a class="btn btn-dark" href="https://www.facebook.com/caro.brentwood" target="_blank" rel="noopener">See our Facebook page</a>
     </section>
   </main>
-
-  <section class="updates" aria-labelledby="updates-h">
-    <h2 id="updates-h">News &amp; Specials</h2>
-    <!-- UPDATES: newest first. Copy one <article> per post. -->
-    <article class="post">
-      <p class="date">Coming soon</p>
-      <h3>Specials and events will be posted here</h3>
-      <p>Check back for daily specials, events and holiday hours.</p>
-    </article>
-    <!-- END UPDATES -->
-  </section>
 
   <iframe class="map" title="Map showing Brentwood Dining &amp; Event Center at 178 Park Dr, Caro" src="https://maps.google.com/maps?q=178%20Park%20Dr%2C%20Caro%2C%20MI%2048723&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
