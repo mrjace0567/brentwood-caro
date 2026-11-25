@@ -1,12 +1,12 @@
-/* Brentwood — fun but calm. Layout: photo hero, white info panel overlapping it, two colored feature tiles. */
+/* Brentwood — black scheme to match their sign (changed 2026-11-24 per user). Calm. Layout: photo hero, white info panel overlapping it, two colored feature tiles. */
 :root {
-  --plum: #33265e;
-  --plum-dk: #241a45;
-  --teal: #0f7f82;
-  --teal-dk: #0b5f61;
-  --bg: #f5f4f9;
-  --text: #1f1b2e;
-  --muted: #4e4865;
+  --plum: #141414;
+  --plum-dk: #000000;
+  --teal: #111111;
+  --teal-dk: #2e2e2e;
+  --bg: #f4f4f4;
+  --text: #151515;
+  --muted: #4a4a4a;
   --font: "Rubik", "Segoe UI", system-ui, sans-serif;
 }
 * { box-sizing: border-box; }
@@ -15,14 +15,14 @@ body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--
 
 .hero {
   text-align: center; color: #fff; padding: 90px 20px 130px;
-  background: linear-gradient(rgba(36,26,69,.62), rgba(36,26,69,.78)), url("images/hero.jpg") center / cover no-repeat, var(--plum);
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.78)), url("images/hero.jpg") center / cover no-repeat, var(--plum);
 }
 h1 { margin: 0; font-weight: 800; font-size: clamp(2.8rem, 11vw, 5rem); letter-spacing: -.01em; text-shadow: 0 2px 14px rgba(0,0,0,.4); }
-.hero p { margin: 8px 0 0; font-size: 1.25rem; color: #ece8f7; }
+.hero p { margin: 8px 0 0; font-size: 1.25rem; color: #e6e6e6; }
 
-.panel { position: relative; max-width: 980px; margin: -80px auto 0; background: #fff; border-radius: 16px; box-shadow: 0 16px 40px rgba(36,26,69,.18); display: grid; grid-template-columns: 1fr 1fr auto; align-items: center; }
+.panel { position: relative; max-width: 980px; margin: -80px auto 0; background: #fff; border-radius: 16px; box-shadow: 0 16px 40px rgba(0,0,0,.2); display: grid; grid-template-columns: 1fr 1fr auto; align-items: center; }
 .panel-col { padding: 26px 28px; }
-.panel-col + .panel-col { border-left: 1px solid #e6e3ef; }
+.panel-col + .panel-col { border-left: 1px solid #e4e4e4; }
 .panel h2 { margin: 0 0 4px; font-size: 1.2rem; color: var(--teal-dk); text-transform: uppercase; letter-spacing: .06em; }
 .panel p { margin: 0; color: var(--muted); }
 .panel .addr { color: var(--text); font-weight: 600; }
@@ -32,7 +32,7 @@ h1 { margin: 0; font-weight: 800; font-size: clamp(2.8rem, 11vw, 5rem); letter-s
 .btn-main { background: var(--teal); color: #fff; font-size: 1.2rem; line-height: 1.25; }
 .btn-main:hover { background: var(--teal-dk); }
 .btn-light { background: #fff; color: var(--plum); margin-top: 16px; }
-.btn-light:hover { background: #ece8f7; }
+.btn-light:hover { background: #e6e6e6; }
 
 .tiles { max-width: 980px; margin: 34px auto 0; padding: 0 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .tile { border-radius: 16px; padding: 32px; color: #fff; }
@@ -49,14 +49,14 @@ h1 { margin: 0; font-weight: 800; font-size: clamp(2.8rem, 11vw, 5rem); letter-s
 .post p { margin: 0; color: var(--muted); }
 
 .map { display: block; width: 100%; height: 360px; border: 0; }
-footer { text-align: center; padding: 22px; background: var(--plum-dk); color: #d6d0ea; font-size: 1rem; }
+footer { text-align: center; padding: 22px; background: var(--plum-dk); color: #d0d0d0; font-size: 1rem; }
 :focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
 
 @media (max-width: 760px) {
   .hero { padding: 64px 20px 110px; }
   .panel { margin: -70px 16px 0; grid-template-columns: 1fr; }
-  .panel-col + .panel-col { border-left: 0; border-top: 1px solid #e6e3ef; }
-  .call-col { order: -1; border-bottom: 1px solid #e6e3ef; }
+  .panel-col + .panel-col { border-left: 0; border-top: 1px solid #e4e4e4; }
+  .call-col { order: -1; border-bottom: 1px solid #e4e4e4; }
   .btn { width: 100%; }
   .tiles { grid-template-columns: 1fr; }
 }
